@@ -1,0 +1,42 @@
+/* Set default sizing for font and boxes */
+:root {
+  font-size: 21px;
+  box-sizing: border-box;
+}
+
+/* Keep the browser edges little distant */
+#app {
+  padding: 2em;
+}
+
+/* 
+ * The Box-sizing hack
+ *
+ * @link: https://w3bits.com/box-sizing-reset/
+ */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* Set the basic text properties */
+body {
+  font: 1em/1.8 Outfit, sans-serif;
+  color: #444;
+}
+
+/* Add a little bit more spacing to paragraphs */
+p:not(:last-child) {
+  margin-bottom: 1.5em;
+}
+
+/* Align the content to the center of the page */
+.content {
+  margin-inline: auto;
+  max-width: 640px;
+}
+
+.content-title {
+  text-align: center;
+}

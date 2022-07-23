@@ -1,0 +1,59 @@
+@import "base";
+
+/* Add the basic cosmetics for the pull quote */
+.pulled-quote {
+  font-size: 1.1em;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+  color: #999;
+  padding-block: 1em;
+  margin-block: 1.5em;
+}
+
+/* Add quotes to the pull quote  */
+.pulled-quote--quoted:before {
+  content: open-quote;
+}
+.pulled-quote--quoted:after {
+  content: close-quote;
+}
+
+/* Add a darker color shade to pull quote */
+.pulled-quote--highlighted {
+  color: #111;
+}
+
+@media only screen and (min-width: 1024px) {
+  /* 
+   * Add width to the pull quote except for 
+   * when it's center-aligned
+   */
+  .pulled-quote:not(.pulled-quote--center) {
+    width: 300px;
+  }
+
+  /*
+   * Add suitable spacing and alignment to the 
+   * left and right aligned pull quotes
+   */
+  .pulled-quote--right {
+    float: right;
+    margin: 0 -200px 0 0;
+    padding: 0 0 1.5em 1.5em;
+    text-align: left;
+  }
+
+  .pulled-quote--left {
+    float: left;
+    margin: 0 0 0 -200px;
+    padding: 0 1.5em 1.5em 0;
+    text-align: right;
+  }
+}
+
+/* Highlight the pull quote sources temporarily */
+p span:not([class]) {
+  color: orange;
+  background-color: lightyellow;
+}
